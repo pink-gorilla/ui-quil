@@ -16,6 +16,6 @@ karma.conf.js
 package.json
 package-lock.json
 shadow-cljs.edn
-
+/node_modules
 goldly_bindings_generated.cljs
 .lsp
