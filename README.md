@@ -20,7 +20,7 @@ then you might want to use [goldly bundel](https://github.com/pink-gorilla/goldl
 
 Goldly Bundel has ui-quil included.
 
-## In Goldly
+## In Goldly as a ui extension
 
 In deps.edn add quil as dependency and add goldly alias
 
@@ -35,6 +35,9 @@ In deps.edn add quil as dependency and add goldly alias
 ```
 
 ## How to make your own bundel
+
+Because ui-quil is a very simple project, it is a good example to learn
+how to write goldly ui extensions.
 
 In deps.edn we get the quil maven library:
 ```
