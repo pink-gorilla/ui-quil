@@ -2,7 +2,7 @@
 
 Use [quil](http://quil.info/) in goldly.
 
-## Usage
+## Demo
 
 ```
 clojure -X:goldly
@@ -16,7 +16,23 @@ Quil snippes are in `running systems` / `snippet-registry`
 Goldly allows you to add any clojurescript or javascript / npm dependency.
 
 If you do not want to build your own bundle and define your own ui components,
-then you might want to use [goldly bundel](https://clojars.org/org.pinkgorilla/goldly-bundel)
+then you might want to use [goldly bundel](https://github.com/pink-gorilla/goldly-bundel)
+
+Goldly Bundel has ui-quil included.
+
+## In Goldly
+
+In deps.edn add quil as dependency and add goldly alias
+
+```
+:goldly
+  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.2.37"}
+               {org.pinkgorilla/ui-quil {:mvn/version "0.0.1"}}
+   :exec-fn goldly-server.app/goldly-server-run!
+   :exec-args {:profile "watch"
+               :config {:goldly {:extensions [[ui.quil.goldly]
+                                              ]}}}}
+```
 
 ## How to make your own bundel
 
