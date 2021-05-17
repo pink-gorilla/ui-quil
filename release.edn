@@ -1,0 +1,4 @@
+{:group-id "org.pinkgorilla"
+ :artifact-id "ui-quil"
+ :scm-url "https://github.com/pink-gorilla/ui-quil/"
+ }
