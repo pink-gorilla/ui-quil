@@ -1,1 +1,0 @@
-["^ ","~:resource-id",["~:shadow.build.modules/prepend","~:snippets"],"~:source","\nshadow.loader.set_load_start('snippets');","~:js","\nshadow.loader.set_load_start('snippets');"]
