@@ -11,7 +11,6 @@ then you might want to use [goldly bundel](https://github.com/pink-gorilla/goldl
 
 Goldly Bundel has ui-quil /and other ui libraries) included. 
 
-
 ## Demo
 
 ```
@@ -20,7 +19,6 @@ clojure -X:goldly
 
 Navigate your webbrowser to port. 
 Quil snippes are in `running systems` / `snippet-registry`
-
 
 
 ## In Goldly as a ui extension
