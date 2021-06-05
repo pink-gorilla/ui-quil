@@ -1,6 +1,6 @@
 {:paths ["src" 
          "resources" ; snippets
-         "target/webly" ; webly bundel
+         ;"target/webly" ; webly bundel
          ]
  :deps
  {org.clojure/clojure    {:mvn/version "1.10.3"}
@@ -39,8 +39,10 @@
   {:main-opts ["-m" "garamond.main"]
    :extra-deps {com.workframe/garamond {:mvn/version "0.4.0"}}}
 
+  ;; demo ui:
+
   :goldly
-  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.2.39"}}
+  {:extra-deps {org.pinkgorilla/goldly {:mvn/version "RELEASE"}}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "watch"
                :config {:goldly {:extensions [[ui.quil.goldly]
