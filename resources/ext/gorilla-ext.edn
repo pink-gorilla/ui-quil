@@ -1,0 +1,16 @@
+{:name "ui-quil"
+ :clj-require []
+ :cljs-namespace [quil.middleware ; access quil drawing functions
+                  quil.core
+                  ui.quil.quil ; add pinkie renderer
+                  ;'quil.sketch
+                  ; 'quil.util
+                  ] 
+ :cljs-bindings {'qbackground quil.core/background
+                 'qfill quil.core/fill
+                 'qellipse quil.core/ellipse}
+ :cljs-ns-bindings {}
+ :snippets [{:type :goldly-clj
+              :category :quil
+              :id :quil1
+              :filename "snippets/quil/quil1.clj"}]}
