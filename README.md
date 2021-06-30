@@ -31,8 +31,7 @@ In deps.edn add quil as dependency and add goldly alias
                {org.pinkgorilla/ui-quil {:mvn/version "0.0.1"}}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "watch"
-               :config {:goldly {:extensions [[ui.quil.goldly]
-                                              ]}}}}
+               :config {:goldly {}}}}
 ```
 
 ## How to make your own bundel
@@ -53,35 +52,7 @@ Because quil needs npm js dependencies we ass deps.cljs:
  {"p5" "^0.9.0" }}
 ```
 
-In ui.quil.goldly we add quils clojurescript namespaces to the js bundel.
-We also add ui.quil.quil, this is to export the configuration so we can
-easily use quil in other goldly projects.
-```
-(add-cljs-namespace [quil.middleware]) ; access quil drawing fuctios
-(add-cljs-namespace [quil.core])
-;'quil.sketch
-; 'quil.util
-(add-cljs-namespace [ui.quil.quil]) ; add pinkie renderer
-```
-
-
-To make quil functions available, we add in ui.quil.goldly:
-```
-(add-cljs-bindings {'qbackground quil.core/background
-                    'qfill quil.core/fill
-                    'qellipse quil.core/ellipse
-                    })
-```
-
-
-To add the demo snippets, we add in ui.quil.goldly:
-```
-(add-snippet {:type :goldly-clj
-              :category :quil
-              :id :quil1
-              :filename "snippets/quil/quil1.clj"})
-```
-
+In resources/ext/gorilla-ext.edn we add quils clojurescript namespaces to the js bundel.
 
 To run goldly and to get goldly to add ui.quil.goldly to
 the bundle we add :goldly alias to deps.edn
@@ -90,8 +61,7 @@ the bundle we add :goldly alias to deps.edn
   {:extra-deps {org.pinkgorilla/goldly {:mvn/version "0.2.37"}}
    :exec-fn goldly-server.app/goldly-server-run!
    :exec-args {:profile "watch"
-               :config {:goldly {:extensions [[ui.quil.goldly]
-                                              ]}}}}
+               :config {:goldly {}}}}
 ```
 
 
