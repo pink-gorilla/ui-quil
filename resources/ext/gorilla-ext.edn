@@ -5,12 +5,20 @@
                   ui.quil.quil ; add pinkie renderer
                   ;'quil.sketch
                   ; 'quil.util
-                  ] 
+                  ]
  :cljs-bindings {'qbackground quil.core/background
                  'qfill quil.core/fill
                  'qellipse quil.core/ellipse}
  :cljs-ns-bindings {}
+
+ :theme {:available  {}
+         :current {}}
+
+ ; modules and pinkie not yet via loader
+ :pinkie {}
+ :modules {}
+
  :snippets [{:type :goldly-clj
-              :category :quil
-              :id :quil1
-              :filename "snippets/quil/quil1.clj"}]}
+             :category :quil
+             :id :quil1
+             :filename "snippets/quil/quil1.clj"}]}
