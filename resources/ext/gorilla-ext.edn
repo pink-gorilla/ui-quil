@@ -1,23 +1,20 @@
 {:name "ui-quil"
  :clj-require []
+ :theme {:available  {}
+         :current {}}
  :cljs-namespace [quil.middleware ; access quil drawing functions
                   quil.core
                   ui.quil.quil ; add pinkie renderer
                   ;'quil.sketch
                   ; 'quil.util
                   ]
- :cljs-bindings {'qbackground quil.core/background
-                 'qfill quil.core/fill
-                 'qellipse quil.core/ellipse}
- :cljs-ns-bindings {}
-
- :theme {:available  {}
-         :current {}}
-
- ; modules and pinkie not yet via loader
+ :cljs-bindings {}
+ :cljs-ns-bindings {'quil {'canvas ui.quil.quil/quil-canvas
+                           'background quil.core/background
+                           'fill quil.core/fill
+                           'ellipse quil.core/ellipse}}
  :pinkie {}
- :modules {}
-
+ :modules {}  ; modules  not yet via loader
  :snippets [{:type :goldly-clj
              :category :quil
              :id :quil1

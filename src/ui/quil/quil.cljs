@@ -2,7 +2,6 @@
   (:require
    [reagent.core :as r]
    [reagent.dom :as rd]
-   [pinkie.pinkie :refer-macros [register-component]]
    [quil.core]
    [quil.middleware]))
 
@@ -21,5 +20,4 @@
     (fn []
       [:div])}))
 
-(register-component :p/quil quil-canvas)
 

@@ -1,13 +1,11 @@
 (require '[goldly.system :as goldly])
 (require '[goldly.runner :refer [system-start!]])
 
-(println "*********************** quil")
-
 (system-start!
  (goldly/system
   {:id :quil1
    :state {}
-   :html [:p/quil [500 500] ?setup ?draw ?update]
+   :html [quil/canvas [500 500] ?setup ?draw ?update]
    :fns {}
    :fns-raw {:setup (fn []
                  {:width   500
@@ -16,8 +14,8 @@
          :draw (fn [{:keys [circles]}]
            ;(qbackground 255)
            (doseq [{[x y] :pos [r g b] :color} circles]
-             (qfill r g b)
-             (qellipse x y 10 10)))
+             (quil/fill r g b)
+             (quil/ellipse x y 10 10)))
          
          :update (fn [{:keys [width height] :as state}]
            (update state 
