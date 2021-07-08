@@ -14,7 +14,7 @@
                            'fill quil.core/fill
                            'ellipse quil.core/ellipse}}
  :pinkie {}
- :modules {}  ; modules  not yet via loader
+ :lazy false ; normal fns not lazy suiteable
  :snippets [{:type :goldly-clj
              :category :quil
              :id :quil1
